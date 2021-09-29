@@ -1,7 +1,6 @@
 #include <stdio.h>
 
-int main(void)
-{
+int main(){
     int a,b=5,c;
     float x,y=-.5,z;
     printf("a=");
