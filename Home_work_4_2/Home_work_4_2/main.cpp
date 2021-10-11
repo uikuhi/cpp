@@ -16,8 +16,6 @@ int main()
     }
     printf("\n");
 
-    srand(time(nullptr));
-
     constexpr size_t size_b = 15;
     int B[size_b] = {};
     for(size_t i = 0; i < size_b; ++i){
