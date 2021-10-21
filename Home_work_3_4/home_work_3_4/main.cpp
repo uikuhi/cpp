@@ -1,6 +1,5 @@
 // Translate dec -> bin
-
-#include <stdio.h>
+#include "Translate.h"
 
 int main()
 {
@@ -8,13 +7,10 @@ int main()
     printf("Enter number: ");
     scanf("%d", &n);
 
-    int result = 0;
-    for(int degree = 1; n >= 1; degree *= 10){
-        result += (n % 2) * degree;
-        n /= 2;
-    }
+    char num[ (sizeof(int) * CHAR_BIT) + 1 ] = {};
 
-    printf("Result: %d\n", result);
+    translateDecToBin(n, num);
+    printf("%s\n", num);
 
     return 0;
 }
