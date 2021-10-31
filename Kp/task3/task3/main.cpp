@@ -9,17 +9,17 @@ int main()
 
     int i = 1;
     int num = 0;
-    int temp = N;
+    int temp = 0;
 
-    printf("%d = ", N);
+    printf("%d = \n", N);
     while(N - num > 0){
-        //printf("N - temp: %d\n", N - temp);
-        while( (N - i >= N - temp) && ( (num & i) == 0))
+        printf("N - temp: %d\n", N - temp);
+        while( (N - temp - i >= 0) && ( (num % i)  != 1))
             i *= 10;
 
         i /= 10;
         num += i;
-      //  printf("num: %d\ti: %d\tN: %d\n", num,i, N);
+        printf("num: %d\ti: %d\tN: %d\n", num,i, N);
 
         temp = num;
 
@@ -31,7 +31,7 @@ int main()
                 printf("%d\n", num);
            }
            num = 0;
-           temp = N;
+           temp = 0;
 
         }
 
