@@ -27,7 +27,7 @@ int main()
             max = arr[i];
     }
 
-    if(max < arr[child + count]){
+    if(max < (arr[child] + count) ){
         printf("%d child have max candy\n", child+1);
     } else {
         printf("%d child have not max candy\n", child+1);
