@@ -3,6 +3,6 @@
 
 #include "Structures.h"
 
-int hash(String* name, unsigned int size);
+int Hash(String* name, unsigned int size);
 
 #endif // FUNCTIONS_EXTERNAL_H

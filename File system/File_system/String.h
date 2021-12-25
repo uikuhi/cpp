@@ -6,10 +6,11 @@ struct String {
     unsigned int size;
 };
 
-String* create_string();
-int add_string(String* dest,  char* src);
-int delete_string(String* str);
-int string_equal(String* dest, String* src);
+String* Create_string();
+String* Add_string(String* dest,  char* src);
+int Delete_string(String* str);
+int String_equal(String* dest, String* src);
+int Strlen(char* str);
 
 
 #endif // STRING_H

@@ -4,21 +4,17 @@
 #include "File_system_structures.h"
 #include "String.h"
 
-
-
-
 struct List{
     String* name;
     i_node* node;
     List* next;
 };
 
-List* create_list();
-int delete_element_list(List* list, String name);
-int add_element_list(List* list, i_node* node);
-List* get_list(List* list, String* name);
-int remove_list(List* list);
-
+List* Create_list();
+int Add_element_list(List* list, i_node* node);
+int Delete_element_list(List* list, String name);
+int Remove_list(List* list);
+List* Get_list(List* list, String* name);
 
 struct Vector {
     unsigned int size;
@@ -26,22 +22,21 @@ struct Vector {
     List **data;
 };
 
-Vector* create_vector();
-int delete_element_vector(Vector* vector, unsigned int index);
-int add_element_vector(Vector* vector,unsigned int index, List* data);
-List* get_vector(Vector* vector, unsigned int index);
-int remove_vector(Vector* vector);
+Vector* Create_vector();
+int Delete_element_vector(Vector* vector, unsigned int index);
+int Add_element_vector(Vector* vector,unsigned int index, List* data);
+int Remove_vector(Vector* vector);
+List* Get_vector(Vector* vector, unsigned int index);
 
-
-struct hash_table{
-    Vector* vector;
+struct Hash_Table {
+    List* hs[20];
 };
 
-hash_table* create_hash_table();
-int add_hash_table(hash_table hs_table, i_node element);
-void delete_element_hash_table(hash_table* hs_table, String name);
-i_node* get_hash_table(hash_table* hs_table, String name);
-int remove_hash_table(hash_table *hs_table);
+Hash_Table* Create_hash_table();
+int Add_hash_table(Hash_Table *hs_table, i_node *element);
+int Delete_element_hash_table(Hash_Table* hs_table, String* name);
+int Remove_hash_table(Hash_Table *hs_table);
+i_node* Get_hash_table(Hash_Table* hs_table, String* name);
 
 #endif // STRUCTURES_H
 
